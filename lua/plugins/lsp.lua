@@ -5,7 +5,15 @@ local M = {
 		"williamboman/mason.nvim",
 		lazy = false,
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+				ui = {
+					icons = {
+						package_installed = "✓",
+						package_pending = "➜",
+						package_uninstalled = "✗"
+					}
+				}
+			})
 		end,
 	},
 	{
@@ -13,6 +21,9 @@ local M = {
 		lazy = false,
 		opts = {
 			auto_install = true,
+			ensure_installed={
+				"tsserver","volar","tailwindcss","pyright","prismals","remark_ls","lua_ls","jsonls","html","dockerls","bashls"
+			}
 		},
 	},
 	{
