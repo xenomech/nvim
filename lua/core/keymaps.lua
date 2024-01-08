@@ -44,9 +44,16 @@ keymap.set({"n", "v"}, "<leader>d", [["_d]])
 keymap.set("n", "Q", "<nop>")
 
 
-keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+-- keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+-- keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+-- keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+-- keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+
+-- Navigate vim panes better
+vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
+vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
+vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
